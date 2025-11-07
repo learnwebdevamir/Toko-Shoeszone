@@ -14,7 +14,7 @@ public class koneksi {
     public static Connection getConnection() {
         if (conn == null) {
             try {
-                String url = "jdbc:mysql://localhost:3306/toko_shoeszone"; // ganti sesuai database kamu
+                String url = "jdbc:mysql://localhost:3306/toko_sepatu"; // ganti sesuai database kamu
                 String user = "root"; // ganti jika user lain
                 String password = ""; // isi password MySQL kamu jika ada
 
