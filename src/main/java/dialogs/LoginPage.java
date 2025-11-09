@@ -161,7 +161,7 @@ public class LoginPage extends javax.swing.JFrame {
                  
                 Users.setId(RS.getInt("id_pegawai"));
                 Users.setNama(RS.getString("nama"));
-                Users.setJabatan(RS.getString("jabatan"));
+                Users.setEmail(RS.getString("Email"));
                 Users.setUsername(RS.getString("username"));
                 Users.setPassword(RS.getString("password"));
             }

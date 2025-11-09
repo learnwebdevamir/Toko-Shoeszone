@@ -8,12 +8,12 @@ package data_produk;
  *
  * @author Tya
  */
-public class Data_Produk extends javax.swing.JPanel {
+public class AddProduk extends javax.swing.JPanel {
 
     /**
      * Creates new form Data_Produk
      */
-    public Data_Produk() {
+    public AddProduk() {
         initComponents();
     }
 

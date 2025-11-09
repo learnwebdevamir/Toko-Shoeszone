@@ -9,15 +9,15 @@ package util;
  * @author ADVAN
  */
 public class Users {
-       // 1. Variabel "Loker" (pakai static)
+    // 1. Variabel "Loker" (pakai static)
     private static int id;
     private static String nama;
-    private static String jabatan;
+    private static String email;
     private static String username;
     private static String password;
     
     // (Anda bisa tambah variabel lain jika perlu)
-
+  
 
     // 2. SETTER (untuk MENYIMPAN data ke loker)
     // Ini akan dipanggil dari LoginPage.java
@@ -30,8 +30,8 @@ public class Users {
         Users.nama = nama;
     }
 
-    public static void setJabatan(String jabatan) {
-        Users.jabatan = jabatan;
+    public static void setEmail(String email) {
+        Users.email = email;
     }
     
     public static void setUsername(String username) {
@@ -54,8 +54,8 @@ public class Users {
         return nama;
     }
 
-    public static String getJabatan() {
-        return jabatan;
+    public static String getEmail() {
+        return email;
     }
     
     public static String getUsername() {

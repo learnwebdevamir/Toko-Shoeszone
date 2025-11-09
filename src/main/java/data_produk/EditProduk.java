@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to EditProduk this template
  */
 package data_produk;
 
@@ -8,12 +8,12 @@ package data_produk;
  *
  * @author Tya
  */
-public class edit extends javax.swing.JPanel {
+public class EditProduk extends javax.swing.JPanel {
 
     /**
      * Creates new form edit
      */
-    public edit() {
+    public EditProduk() {
         initComponents();
     }
 
