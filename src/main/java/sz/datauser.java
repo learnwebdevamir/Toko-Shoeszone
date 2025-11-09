@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package loginpage;
+package sz;
 
 /**
  *
@@ -143,13 +143,11 @@ public class datauser extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\semester 3\\pemrograman komputer\\Home 1.png")); // NOI18N
         jLabel8.setText("Home");
         jLabel8.setMaximumSize(new java.awt.Dimension(50, 50));
         jLabel8.setMinimumSize(new java.awt.Dimension(50, 50));
         jLabel8.setPreferredSize(new java.awt.Dimension(50, 50));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\semester 3\\pemrograman komputer\\Bookmark.png")); // NOI18N
         jLabel9.setText("Data user");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

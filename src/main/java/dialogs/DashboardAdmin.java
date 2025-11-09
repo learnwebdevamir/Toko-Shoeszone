@@ -2,20 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.toko_shoeszone;
+package dialogs;
+
+import util.Users;
 
 /**
  *
  * @author ADVAN
  */
-public class DashboardShoeszone extends javax.swing.JFrame {
+public class DashboardAdmin extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(DashboardShoeszone.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(DashboardAdmin.class.getName());
+    Users usr;
 
     /**
      * Creates new form DashboardShoeszone
      */
-    public DashboardShoeszone() {
+    public DashboardAdmin() {
         initComponents();
     }
 
@@ -154,7 +157,7 @@ public class DashboardShoeszone extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new DashboardShoeszone().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new DashboardAdmin().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

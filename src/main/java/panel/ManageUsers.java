@@ -2,20 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package shoeszone.panel;
+package panel;
 
 /**
  *
  * @author ADVAN
  */
-public class KelolaUserPanel extends javax.swing.JFrame {
+public class ManageUsers extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(KelolaUserPanel.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ManageUsers.class.getName());
 
     /**
      * Creates new form KelolaUserPanel
      */
-    public KelolaUserPanel() {
+    public ManageUsers() {
         initComponents();
     }
 
@@ -186,12 +186,7 @@ public class KelolaUserPanel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Membuat dialog menjadi modal (harus ditutup sebelum bisa klik yg lain)
-        TambahUserDialog dialog = new TambahUserDialog(new javax.swing.JFrame(), true);
-        dialog.setVisible(true);
 
-        // Setelah dialog ditutup, refresh data tabel agar data baru muncul
-        load_data();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -240,7 +235,7 @@ public class KelolaUserPanel extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new KelolaUserPanel().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new ManageUsers().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
