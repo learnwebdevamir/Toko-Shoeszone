@@ -1,4 +1,4 @@
-package sz.util;
+package sz.panel;
 
 public class Pegawai {
     private int id_pegawai;

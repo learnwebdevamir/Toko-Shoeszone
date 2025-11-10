@@ -46,8 +46,6 @@ public class LoginPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 204, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg_sepatu.jpg"))); // NOI18N
-
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -199,31 +197,41 @@ public class LoginPage extends javax.swing.JFrame {
             Users Usr = new Users();
             while (RS.next()) {
                 n++;
-                Users.setId(RS.getInt("id"));
+                Users.setId(RS.getInt("id_pegawai"));
                 Users.setNama(RS.getString("nama_pegawai"));
-                Users.setEmail(RS.getString("email"));
+                Users.setJabatan(RS.getString("jabatan"));
                 Users.setUsername(RS.getString("username"));
-                Users.setPassword(RS.getString("password"));
+                Users.setPassword(RS.getString("password_hash"));
             }
             if (n > 0) {
-                if (Users.getUsername().equals("kasir2")) {
-                    this.setVisible(false);
-                    DashboardAdmin DA = new DashboardAdmin();
-                    DA.Users = Usr;
-                    DA.setVisible(true);
-                    DA.setExtendedState(Frame.MAXIMIZED_BOTH);
-                }else if(Users.getUsername().equals("kasir1")){
-                    //kita redirect ke dashboard kasir
-                }else if(Users.getUsername().equals("admin")){
-                    //kita redirect ke dashboard manajer
-                }else {
-                    //opsional
+                switch (Users.getUsername()) {
+                    case "kasir2" -> {
+                        this.setVisible(false);
+                        DashboardAdmin DA = new DashboardAdmin();
+                        DA.Users = Usr;
+                        DA.setVisible(true);
+                        DA.setExtendedState(Frame.MAXIMIZED_BOTH);
+                    }
+                    case "kasir1" -> {
+                    }
+                    case "admin" -> {
+                    }
+                    default -> {
+                    }
                 }
-            } else {
+                //kita redirect ke dashboard kasir
+                //kita redirect ke dashboard manajer
+                //opsional
+                            } else {
                 System.err.println("Akun tidak ditemukan");
             }
         } catch (SQLException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Terjadi error:\n" + e.getMessage());
         }
+        
+        
+            
+        
 
     }
 }

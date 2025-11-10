@@ -12,7 +12,7 @@ public class Users {
     // 1. Variabel "Loker" (pakai static)
     private static int id;
     private static String nama;
-    private static String email;
+    private static String jabatan;
     private static String username;
     private static String password;
     
@@ -30,8 +30,8 @@ public class Users {
         Users.nama = nama;
     }
 
-    public static void setEmail(String email) {
-        Users.email = email;
+    public static void setJabatan(String jabatan) {
+        Users.jabatan = jabatan;
     }
     
     public static void setUsername(String username) {
@@ -54,8 +54,8 @@ public class Users {
         return nama;
     }
 
-    public static String getEmail() {
-        return email;
+    public static String getJabatan() {
+        return jabatan;
     }
     
     public static String getUsername() {
