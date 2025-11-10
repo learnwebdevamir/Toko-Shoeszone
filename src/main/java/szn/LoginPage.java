@@ -182,56 +182,105 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 
-    private void Login() {
+    
+    
+    
+    
+    
+      private void Login() {
         String usr = txtUsername.getText();
         String pwd = new String(txtPassword.getPassword());
         try {
             Connection K = Koneksi.Go();
             Statement ST = K.createStatement();
-            String Q = "SELECT * FROM pegawai "
+            String Q = "SELECT * FROM Users "
                     + "WHERE "
-                    + "username='" + usr + "' AND "
-                    + "password_hash='" + pwd + "'";
+                    + "username='"+usr+"' AND "
+                    + "password='"+pwd+"'";
             ResultSet RS = ST.executeQuery(Q);
             int n = 0;
-            Users Usr = new Users();
-            while (RS.next()) {
+            Users Us = new Users();
+            while (RS.next()) {                
                 n++;
-                Users.setId(RS.getInt("id_pegawai"));
-                Users.setNama(RS.getString("nama_pegawai"));
-                Users.setJabatan(RS.getString("jabatan"));
-                Users.setUsername(RS.getString("username"));
-                Users.setPassword(RS.getString("password_hash"));
+                Users.setId(RS.getInt("id_user"));
+                Users.setNama(RS.getString("nama"));
+//                Us.setNama(RS.getString("nama"));
+                Us.setEmail(RS.getString("Email"));
+                Users.setUsername(RS.getString("Username"));
+                Users.setPassword(RS.getString("password"));
             }
-            if (n > 0) {
-                switch (Users.getUsername()) {
-                    case "kasir2" -> {
-                        this.setVisible(false);
-                        DashboardAdmin DA = new DashboardAdmin();
-                        DA.Users = Usr;
-                        DA.setVisible(true);
-                        DA.setExtendedState(Frame.MAXIMIZED_BOTH);
-                    }
-                    case "kasir1" -> {
-                    }
-                    case "admin" -> {
-                    }
-                    default -> {
-                    }
-                }
-                //kita redirect ke dashboard kasir
-                //kita redirect ke dashboard manajer
-                //opsional
-                            } else {
+            if(n>0){
+                //System.out.println("Akun ditemukan");
+                this.setVisible(false); 
+                
+                //
+                DashboardAdmin DA = new DashboardAdmin();
+                DA.Usr = Us;
+                DA.setVisible(true);
+                DA.setExtendedState(Frame.MAXIMIZED_BOTH); 
+            }else {
                 System.err.println("Akun tidak ditemukan");
             }
         } catch (SQLException e) {
             javax.swing.JOptionPane.showMessageDialog(this, "Terjadi error:\n" + e.getMessage());
         }
-        
-        
-            
-        
-
-    }
+      }
 }
+
+//    private void Login() {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
+//}
+//    private void Login() {
+//        String usr = txtUsername.getText();
+//        String pwd = new String(txtPassword.getPassword());
+//        try {
+//            Connection K = Koneksi.Go();
+//            Statement ST = K.createStatement();
+//            String Q = "SELECT * FROM Users "
+//                    + "WHERE "
+//                    + "username='" + usr + "' AND "
+//                    + "password='" + pwd + "'";
+//            ResultSet RS = ST.executeQuery(Q);
+//            int n = 0;
+//            Users Usr = new Users();
+//            while (RS.next()) {
+//                n++;
+//                Users.setId(RS.getInt("id_user"));
+//                Users.setNama(RS.getString("nama"));
+//                Users.setJabatan(RS.getString("email"));
+//                Users.setUsername(RS.getString("username"));
+//                Users.setPassword(RS.getString("password"));
+//            }
+//            if (n > 0) {
+//                switch (Users.getUsername()) {
+//                    case "kasir2" -> {
+//                        this.setVisible(false);
+//                        DashboardAdmin DA = new DashboardAdmin();
+//                        DA.Users = Usr;
+//                        DA.setVisible(true);
+//                        DA.setExtendedState(Frame.MAXIMIZED_BOTH);
+//                    }
+//                    case "kasir1" -> {
+//                    }
+//                    case "admin" -> {
+//                    }
+//                    default -> {
+//                    }
+//                }
+//                //kita redirect ke dashboard kasir
+//                //kita redirect ke dashboard manajer
+//                //opsional
+//                            } else {
+//                System.err.println("Akun tidak ditemukan");
+//            }
+//        } catch (SQLException e) {
+//            javax.swing.JOptionPane.showMessageDialog(this, "Terjadi error:\n" + e.getMessage());
+//        }
+//        
+//        
+//            
+//        
+//
+//    }
+//}

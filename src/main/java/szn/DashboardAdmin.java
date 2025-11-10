@@ -17,7 +17,7 @@ import sz.util.Users;
 public class DashboardAdmin extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(DashboardAdmin.class.getName());
-    Users Users;
+    Users Usr;
 
     /**
      * Creates new form DashboardAdmin

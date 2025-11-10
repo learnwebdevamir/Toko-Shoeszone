@@ -9,10 +9,13 @@ package sz.util;
  * @author ADVAN
  */
 public class Users {
-    // 1. Variabel "Loker" (pakai static)
+
     private static int id;
-    private static String nama;
     private static String jabatan;
+    // 1. Variabel "Loker" (pakai static)
+    private static int id_user;
+    private static String nama;
+    private static String email;
     private static String username;
     private static String password;
     
@@ -64,6 +67,10 @@ public class Users {
     
     public static String getpassword(){
         return password;
+    }
+
+    public void setEmail(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }
